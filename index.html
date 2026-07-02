@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Chi</title>
+
+<!-- Icon hiện trên màn hình chính iPhone -->
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="apple-touch-icon.png">
+
+<!-- Mở fullscreen như app thật, không có thanh trình duyệt -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Chi">
+
+<style>
+  html, body{
+    margin:0; padding:0;
+    height:100%;
+    background:#17191a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:-apple-system, sans-serif;
+  }
+  .wrap{ text-align:center; }
+  .paw{ width:120px; height:120px; }
+  p{ color:#6c6e70; font-size:13px; font-style:italic; margin-top:18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <svg class="paw" viewBox="0 0 48 48" fill="none">
+    <ellipse cx="24" cy="30" rx="12" ry="10" fill="#6fd8a8"/>
+    <ellipse cx="10" cy="16" rx="5" ry="6" fill="#6fd8a8"/>
+    <ellipse cx="22" cy="10" rx="5" ry="6.5" fill="#6fd8a8"/>
+    <ellipse cx="34" cy="12" rx="5" ry="6.5" fill="#6fd8a8"/>
+    <ellipse cx="42" cy="20" rx="4.5" ry="5.5" fill="#6fd8a8"/>
+  </svg>
+  <p>meo~ đang mở app cho anh...</p>
+</div>
+
+<script>
+  // >>> DÁN LINK APP CỦA ANH VÀO GIỮA 2 DẤU NHÁY DƯỚI ĐÂY (link .../exec) <<<
+  var APP_URL = 'https://script.google.com/a/macros/tmp.vn/s/AKfycbxI8LwMRgypMp2re1-b4oCb_v2GW6NlnxazDtz4MxS4S50ooN9kCH5v33JdlId8Tccn/exec';
+
+  if (APP_URL.indexOf('http') === 0) {
+    setTimeout(function(){ window.location.replace(APP_URL); }, 600);
+  } else {
+    document.querySelector('p').textContent = 'Chưa cài link app — mở file index.html và dán link vào chỗ APP_URL nhé';
+  }
+</script>
+</body>
+</html>
